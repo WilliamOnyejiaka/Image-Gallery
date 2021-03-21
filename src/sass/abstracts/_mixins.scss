@@ -1,0 +1,15 @@
+
+@mixin btnDesign($fontSize) {
+  height: 40px;
+  border: 1px solid #000000;
+  padding: 1%;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: $fontSize;
+}
+
+@mixin adjustPlaceholder($width,$height) {
+  width: $width;
+  height: $height;
+}

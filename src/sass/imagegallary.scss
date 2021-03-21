@@ -1,0 +1,44 @@
+@use './base';
+@use './abstracts';
+@use './components';
+@use './layouts';
+
+body {
+  background-color: black;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+@media (max-width: 812px) and (max-height: 375px) {
+  .modal #placeholder {
+    @include abstracts.adjustPlaceholder(450px,280px);
+  }
+}
+
+@media (max-width: 568px) and (max-height: 320px) {
+  .modal #placeholder {
+    @include abstracts.adjustPlaceholder(400px,220px);
+  }
+}
+
+@media (max-width: 540px) and (max-height: 720px) {
+  .modal #placeholder {
+    @include abstracts.adjustPlaceholder(400px,220px);
+  }
+}
+
+@media (max-width: 653px) and (max-height: 280px),
+  (max-width: 400px),
+  (max-width: 500px) {
+  .modal #placeholder {
+    @include abstracts.adjustPlaceholder(320px,195px);
+  }
+}
+
+@media (max-width: 320px) {
+  .modal #placeholder {
+    @include abstracts.adjustPlaceholder(250px,150px);
+  }
+}

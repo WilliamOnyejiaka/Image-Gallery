@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Image Gallery">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/imagegallary.css">
+        <script src="./Vendors/JQuery/3.5.1/JQuery.min.js" defer></script>
+        <script type="module" src="./script/script.js" defer></script>
+        <script nomodule src="./script/nomodule.js" defer></script>
+        <title>Image Gallery</title>
+    </head>
+    <body >
+
+        <nav> 
+            <div class="logo_container">
+                <h4 class="logo">Gallery</h1>
+            </div>
+        
+                <ul class="nav-links">
+                    <li class="link-hover"><a href="#hook" class="link">Coding </a></li>
+                    <li class="link-hover"><a href="#hook1" class="link">Animals</a></li>
+                    <li class="link-hover"><a href="#hook2" class="link">Wallpapers</a></li>
+                    <li class="link-hover"><a href="#hook3" class="link">Backgrounds</a></li>
+                </ul>
+        
+                <div class="burger">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div>
+                </div>
+        </nav>
+
+        <div class="container" >
+            <h1>Coding</h1>
+            <div class="hooks" id="hook"></div>
+            <h1>Animals</h1>
+            <div class="hooks" id="hook1"></div>
+            <h1>Wallpapers</h1>
+            <div class="hooks" id="hook2"></div>
+            <h1>Backgrounds</h1>
+            <div class="hooks" id="hook3"></div>
+<!--
+            <div class="contain">
+                <img src="../img/ferenc-almasi-0JD-LiIi2CU-unsplash.jpg" alt="Ferenc Almasi" class="image" id="10">
+                <h1>Ferenc Almasi</h1>
+            </div>          
+-->
+        </div>
+        
+        <div class="modal">
+            <div class="modal__contain">
+                <div class="control">
+                    <h2 id="label">Image</h2>
+                    <div id="close" title="Close Slide">&times;</div>
+                </div>
+                <div class="modal__contain__placeholder" id="ts"><img id="placeholder"></div>
+            </div>
+            <div class="btns">
+                <button class="btn previous" id="previous"><span class="icon">&#8249;</span></button>
+               <a id="download" download="">
+                Download
+               </a>
+                <button class="btn next" id="next"><span class="icon">&#8250;</span></button>
+            </div>
+        </div>
+   
+        <div class="overlay"></div>
+
+        <footer>
+            <div class="footer_container">
+                <h1>About The Website</h1>
+                <p>This website is a static Gallary Website that shuffles the images each time it is loaded and a slider which contains a download button and navigation buttons pops-up when an image is clicked on.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

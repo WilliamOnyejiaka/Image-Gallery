@@ -1,0 +1,81 @@
+@use '../abstracts';
+
+.modal {
+  font-family: sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 100;
+  transition: 0.3s ease;
+
+  #{&}__contain {
+    color: rgb(9, 4, 41);
+    text-align: center;
+
+    .control {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      & #close {
+        font-weight: bold;
+        font-size: 1.5em;
+        color: white;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  #placeholder {
+    width: 450px;
+    height: 300px;
+    max-height: 80%;
+    border-radius: 5px;
+    transition: 0.5 ease;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+
+    & .btn {
+      width: 40px;
+      @include abstracts.btnDesign(1.5em);
+    }
+  }
+
+  #download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @include abstracts.btnDesign(1.2em);
+    background: #0000ff;
+  }
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  background: rgba(0, 0, 0, 0.78);
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.overlay.active {
+  visibility: visible;
+  pointer-events: all;
+}

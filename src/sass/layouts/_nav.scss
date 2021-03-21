@@ -1,0 +1,157 @@
+
+nav {
+  display: flex;
+  min-height: 10vh;
+  justify-content: space-around;
+  background-color: white;
+  font-family: sans-serif;
+  border: 2px solid white;
+}
+
+nav.active {
+  filter: blur(5px);
+
+}
+
+.logo_container {
+  padding-top: 1%;
+
+  .logo { 
+    font-size: 1.6em;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: serif;
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1em;
+}
+
+.burger {
+  cursor: pointer;
+  display: none;
+  padding-top: 1%;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: rgb(0, 0, 0);
+  transition: 0.5s ease;
+}
+
+.link-hover {
+  padding: 2%;
+  border-radius: 3px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.link-hover:hover {
+  background-color: #ac5384;
+  color: white;
+} 
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 70%;
+  }
+  .logo_container {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  body {
+    overflow-x: hidden;
+  }
+  .logo_container {
+    padding-top: 5%;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 9vh;
+    height: 94vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    opacity: 0;
+    transition: 0.5s ease;
+    pointer-events: none;
+    width: 60%;
+    border: 10px solid white;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .link-hover {
+    padding: 5%;
+    border-radius: 3px;
+    transition: 0.5s ease;
+  }
+
+  .link-hover:hover {
+     background-color: #ac5384;
+  }
+
+  .burger {
+    display: block;
+    padding-top: 5%;
+  }
+}
+
+.nav-active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+
+
+@keyframes navLinkFade {
+  from {
+    transform: translate(50px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.toggle {
+  padding-top: 0%;
+}
+
+.toggle #line1 {
+  transform: rotate(-45deg) translate(-6px,5px);
+}
+
+.toggle #line2 {
+  opacity: 0;
+}
+
+
+.toggle #line3 {
+  transform: rotate(45deg) translate(-6px,-5px);
+}
