@@ -1,3 +1,3 @@
 # Image-Gallery
 This website is a static Gallary Website that shuffles the images each time it is loaded and a slider which contains a download button and navigation buttons pops-up when an image is clicked on.
-https://image-gallary-b2eae.web.app/
+image-gallery-25ac0.web.app
